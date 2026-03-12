@@ -1,24 +1,19 @@
-import profileImage from './assets/user-profile.svg'
 import './App.css'
+import Badge from './Badge'
 
 
-function ProductCard(){
-
-    const nom = "Ali";
-    const prenom = "Mohamed";
+function ProductCard({name,price,emoji,description="Non disponible"}){
 
     return (
         <div>
-            <h2>Nom  : {nom}</h2>
-            <h3>Prenom : {prenom} </h3>
-            <a href="https://react.dev" target="_blank">
-            <img src={profileImage} class="profile" alt="logo" />
-            </a>
+            <h3>Name  : {name}</h3>
+            <h3>Price : {price} €</h3>
+            <h3>Description : {description} </h3>
+            <h3>Emoji : {emoji} </h3>
+            <Badge>PROMO</Badge>
+            <hr />
         </div>
     )
-       
-    
-
 }
 
 export default ProductCard
